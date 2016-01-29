@@ -1,0 +1,10 @@
+D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\bin\Debug\Botnet.net.exe
+D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\bin\Debug\Botnet.net.pdb
+D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\obj\Debug\Botnet.net.csprojResolveAssemblyReference.cache
+D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\obj\Debug\Botnet.net.BotBrowser.resources
+D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\obj\Debug\Botnet.net.Properties.Resources.resources
+D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\obj\Debug\Botnet.net.csproj.GenerateResource.Cache
+D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\obj\Debug\Botnet.net.exe
+D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\obj\Debug\Botnet.net.pdb
+D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.exe
+D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.pdb
