@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Botnet.net", "Botnet.net\Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updater", "Updater\Updater.csproj", "{9BBE6810-1779-4798-A4BF-E7CFB74BE6BB}"
 EndProject
+<<<<<<< HEAD
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotLib", "BotLib\BotLib.csproj", "{07122C11-CEED-4F34-B4B9-A4CEA83C8B3B}"
+EndProject
+=======
+>>>>>>> f309d7dd66b937635e8d55a42c2f646aa79b6ebb
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,13 @@ Global
 		{9BBE6810-1779-4798-A4BF-E7CFB74BE6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BBE6810-1779-4798-A4BF-E7CFB74BE6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BBE6810-1779-4798-A4BF-E7CFB74BE6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+		{07122C11-CEED-4F34-B4B9-A4CEA83C8B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07122C11-CEED-4F34-B4B9-A4CEA83C8B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07122C11-CEED-4F34-B4B9-A4CEA83C8B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07122C11-CEED-4F34-B4B9-A4CEA83C8B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> f309d7dd66b937635e8d55a42c2f646aa79b6ebb
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
