@@ -8,3 +8,5 @@ D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\obj\Debug\
 D:\Проект\Мусорные проекты\Botnet.net\Botnet.net\obj\Debug\Botnet.net.pdb
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.exe
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.pdb
+d:\Projects\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.exe
+d:\Projects\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.pdb
