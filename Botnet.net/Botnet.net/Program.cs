@@ -15,9 +15,12 @@ namespace Botnet.net
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BotBrowser());
+            while (true)
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new BotBrowser());
+            }
         }
     }
 }
