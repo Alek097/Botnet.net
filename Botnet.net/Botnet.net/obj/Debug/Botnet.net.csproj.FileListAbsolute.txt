@@ -16,3 +16,5 @@ D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.csprojReso
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.BotBrowser.resources
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.Properties.Resources.resources
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.csproj.GenerateResource.Cache
+D:\Проект\Botnet.net\Botnet.net\Botnet.net\bin\Debug\BotLib.dll
+D:\Проект\Botnet.net\Botnet.net\Botnet.net\bin\Debug\BotLib.pdb

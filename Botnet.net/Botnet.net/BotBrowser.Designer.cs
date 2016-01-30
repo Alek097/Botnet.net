@@ -39,7 +39,7 @@
             this.Browser.Name = "Browser";
             this.Browser.Size = new System.Drawing.Size(298, 271);
             this.Browser.TabIndex = 0;
-            this.Browser.Url = new System.Uri("http://www.twitch.tv/kanalkarnaval", System.UriKind.Absolute);
+            this.Browser.Url = new System.Uri("", System.UriKind.Relative);
             // 
             // BotBrowser
             // 

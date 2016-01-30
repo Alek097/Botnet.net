@@ -5,12 +5,12 @@ using System.Text;
 
 namespace BotLib
 {
-    static class TaskManager
+    public static class TaskManager
     {
-        public static Task GetTask()
+        public static bool TryGetTask(out Task task)
         {
-            Task task = new Task();
-            return task;            
+            task = new Task(TaskType.Visit, "http://www.twitch.tv/kanalkarnaval", 1, 0, 0);
+            return true;
         }
     }
 }
