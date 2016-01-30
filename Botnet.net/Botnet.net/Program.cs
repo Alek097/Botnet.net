@@ -29,6 +29,7 @@ namespace Botnet.net
                         bot.SleepToSession();
                         Application.Exit();
                     });
+                    closeApp.Start();
                     Application.Run(bot);
 
                 }
