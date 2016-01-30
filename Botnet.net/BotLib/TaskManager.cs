@@ -80,7 +80,7 @@ namespace BotLib
         }
         static string GetTaskString()
         {
-            return "visit;http://www.twitch.tv/kanalkarnaval;1:0:0";// TODO: Позже добавить обращение к серверу.
+            return "visit;http://www.twitch.tv/kanalkarnaval;0:1:0";// TODO: Позже добавить обращение к серверу.
         }
     }
 }

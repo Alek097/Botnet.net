@@ -23,8 +23,14 @@ namespace Botnet.net
             {
                 if (TaskManager.TryGetTask(out task))
                 {
-                    BotBrowser bot = new BotBrowser();//Инициализация бота
+                    BotBrowser bot = new BotBrowser(task);
+                    System.Threading.Tasks.Task closeApp = new System.Threading.Tasks.Task(() =>
+                    {
+                        bot.SleepToSession();
+                        Application.Exit();
+                    });
                     Application.Run(bot);
+
                 }
                 Thread.Sleep(60 * 1000 * 5);//Задержка между сеансами 5 минут
             }
