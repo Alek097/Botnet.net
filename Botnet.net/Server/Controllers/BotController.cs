@@ -16,7 +16,7 @@ namespace Server.Controllers
         public string GetTask()
         {
 
-            return ""; //Потому что нам не нужен только текст, а не html документ
+            return "visit;http://www.twitch.tv/kanalkarnaval;0:1:0"; //Потому что нам не нужен только текст, а не html документ
         }
     }
 }

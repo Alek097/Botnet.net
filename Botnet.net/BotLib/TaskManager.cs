@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net;
 
 namespace BotLib
 {
@@ -80,7 +81,10 @@ namespace BotLib
         }
         static string GetTaskString()
         {
-            return "visit;http://www.twitch.tv/kanalkarnaval;0:1:0";// TODO: Позже добавить обращение к серверу.
+            using (WebClient wc = new WebClient())
+            {
+                return wc.DownloadString("http://localhost:18682/Bot/GetTask");
+            }
         }
     }
 }
