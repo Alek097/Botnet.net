@@ -1,0 +1,5 @@
+D:\Проект\Botnet.net\Botnet.net\Setup\bin\Debug\Setup.exe
+D:\Проект\Botnet.net\Botnet.net\Setup\bin\Debug\Setup.pdb
+D:\Проект\Botnet.net\Botnet.net\Setup\obj\Debug\Setup.csprojResolveAssemblyReference.cache
+D:\Проект\Botnet.net\Botnet.net\Setup\obj\Debug\Setup.exe
+D:\Проект\Botnet.net\Botnet.net\Setup\obj\Debug\Setup.pdb

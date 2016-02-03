@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Microsoft.Win32;
 using System.Net;
 
 namespace BotLib
 {
     public static class TaskManager
     {
+
         public static Guid id { get; set; }//TODO: Ревлизовать взятие ИД из файла.
         public static bool TryGetTask(out Task task)
         {
@@ -84,6 +85,21 @@ namespace BotLib
             using (WebClient wc = new WebClient())
             {
                 return wc.DownloadString("http://localhost:18682/Bot/GetTask?id=" + id.ToString());
+            }
+        }
+        static TaskManager()
+        {
+            bool isNull = true;
+            while (isNull)
+            {
+                string keyName = "HKEY_LOCAL_MACHINE/SOFTWARE/Andrew/";
+
+                object val = Registry.GetValue(keyName, "GUID", null);
+                if(val != null)
+                {
+                    isNull = false;
+                    id = (Guid)val;
+                }
             }
         }
     }
