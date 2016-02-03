@@ -15,7 +15,7 @@ namespace Updater
         {
             string pathToFile = @"D:\123.txt"; //путь к exe клиента бота
             string url = "setver.net/update.exe";
-
+            //просто так
             //все исключения молча перехватывается, чтобы не палить контору.
             try
             {

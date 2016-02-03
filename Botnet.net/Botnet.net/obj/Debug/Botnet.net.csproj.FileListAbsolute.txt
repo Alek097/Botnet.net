@@ -19,3 +19,4 @@ D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Debug\Botnet.net.csproj.Gen
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\bin\Debug\BotLib.dll
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\bin\Debug\BotLib.pdb
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\bin\Debug\Botnet.net.exe.config
+d:\Projects\Botnet.net\Botnet.net\Botnet.net\bin\Debug\Botnet.net.exe.config
