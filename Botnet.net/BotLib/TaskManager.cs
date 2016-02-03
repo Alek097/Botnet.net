@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using System.Net;
 
 namespace BotLib
 {
     public static class TaskManager
     {
+        public static Guid id { get; set; }//TODO: Ревлизовать взятие ИД из файла.
         public static bool TryGetTask(out Task task)
         {
             task = new Task();
@@ -80,7 +81,10 @@ namespace BotLib
         }
         static string GetTaskString()
         {
-            return "visit;http://www.twitch.tv/kanalkarnaval;0:1:0";// TODO: Позже добавить обращение к серверу.
+            using (WebClient wc = new WebClient())
+            {
+                return wc.DownloadString("http://localhost:18682/Bot/GetTask?id=" + id.ToString());
+            }
         }
     }
 }

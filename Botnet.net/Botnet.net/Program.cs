@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Text;
+using System.Net;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -9,6 +10,7 @@ namespace Botnet.net
 {
     static class Program
     {
+        public static Thread ResponseServer { get; set; }
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -23,12 +25,27 @@ namespace Botnet.net
             {
                 if (TaskManager.TryGetTask(out task))
                 {
+
+                    ResponseServer = new Thread(() =>
+                    {
+
+                        using (WebClient WC = new WebClient() { Encoding = Encoding.UTF8 })
+                            while (true)
+                            {
+                                WC.DownloadString("http://localhost:18682/Bot/Working?id=" + TaskManager.id.ToString());// Отклик каждые пять минут
+                                Thread.Sleep(1000 * 60 * 5);
+                            }
+                    });
+                    ResponseServer.IsBackground = true;
+
                     BotBrowser bot = new BotBrowser(task);
-                    System.Threading.Tasks.Task closeApp = new System.Threading.Tasks.Task(() =>
+                    System.Threading.Thread closeApp = new System.Threading.Thread(() =>
                     {
                         bot.SleepToSession();
-                        Application.Exit();
+                        Application.Exit();// закрываем приложением
+                        ResponseServer.Abort();//заканчиваем отклики серверу о работе
                     });
+                    closeApp.IsBackground = true;
                     closeApp.Start();
                     Application.Run(bot);
 
