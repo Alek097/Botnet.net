@@ -7,6 +7,7 @@ namespace BotLib
 {
     public static class TaskManager
     {
+        public static Guid id { get; set; }//TODO: Ревлизовать взятие ИД из файла.
         public static bool TryGetTask(out Task task)
         {
             task = new Task();
@@ -82,7 +83,7 @@ namespace BotLib
         {
             using (WebClient wc = new WebClient())
             {
-                return wc.DownloadString("http://localhost:18682/Bot/GetTask");
+                return wc.DownloadString("http://localhost:18682/Bot/GetTask?id=" + id.ToString());
             }
         }
     }

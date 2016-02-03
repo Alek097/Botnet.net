@@ -42,6 +42,7 @@ namespace Botnet.net
         public void SleepToSession()// используется для задержки пока ссесия не закончится
         {
             while (!this._PageIsLoad) ;
+            Program.ResponseServer.Start();
             Thread.Sleep(_time);
         }
     }
