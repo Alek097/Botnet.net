@@ -15,7 +15,6 @@ namespace Server.Controllers
         // GET: Bot
         public string GetTask()
         {
-
             return "visit;http://www.twitch.tv/kanalkarnaval;0:1:0"; //Потому что нам не нужен только текст, а не html документ
         }
     }
