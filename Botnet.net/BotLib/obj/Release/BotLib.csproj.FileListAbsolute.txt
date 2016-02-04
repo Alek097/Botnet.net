@@ -1,0 +1,5 @@
+D:\Проект\Botnet.net\Botnet.net\BotLib\bin\Release\BotLib.dll
+D:\Проект\Botnet.net\Botnet.net\BotLib\bin\Release\BotLib.pdb
+D:\Проект\Botnet.net\Botnet.net\BotLib\obj\Release\BotLib.csprojResolveAssemblyReference.cache
+D:\Проект\Botnet.net\Botnet.net\BotLib\obj\Release\BotLib.dll
+D:\Проект\Botnet.net\Botnet.net\BotLib\obj\Release\BotLib.pdb

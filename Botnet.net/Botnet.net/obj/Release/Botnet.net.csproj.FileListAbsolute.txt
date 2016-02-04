@@ -5,3 +5,7 @@ D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Release\Botnet.net.Properti
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Release\Botnet.net.csproj.GenerateResource.Cache
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Release\Botnet.net.exe
 D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Release\Botnet.net.pdb
+D:\Проект\Botnet.net\Botnet.net\Botnet.net\bin\Release\Botnet.net.exe.config
+D:\Проект\Botnet.net\Botnet.net\Botnet.net\bin\Release\BotLib.dll
+D:\Проект\Botnet.net\Botnet.net\Botnet.net\bin\Release\BotLib.pdb
+D:\Проект\Botnet.net\Botnet.net\Botnet.net\obj\Release\Botnet.net.csprojResolveAssemblyReference.cache
