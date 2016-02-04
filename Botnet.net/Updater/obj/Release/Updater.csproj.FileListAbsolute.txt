@@ -1,0 +1,6 @@
+D:\Проект\Botnet.net\Botnet.net\Updater\bin\Release\Updater.exe.config
+D:\Проект\Botnet.net\Botnet.net\Updater\bin\Release\Updater.exe
+D:\Проект\Botnet.net\Botnet.net\Updater\bin\Release\Updater.pdb
+D:\Проект\Botnet.net\Botnet.net\Updater\obj\Release\Updater.csprojResolveAssemblyReference.cache
+D:\Проект\Botnet.net\Botnet.net\Updater\obj\Release\Updater.exe
+D:\Проект\Botnet.net\Botnet.net\Updater\obj\Release\Updater.pdb
