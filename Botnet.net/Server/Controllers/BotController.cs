@@ -29,9 +29,9 @@ namespace Server.Controllers
             return string.Empty;//Возвращает пустую строку.
         }
         [HttpPost]
-        public string Working(Guid id)// отклик что бот работает поступают сюда
+        public void Working(Guid id)// отклик что бот работает поступают сюда
         {
-            return string.Empty;
+            
         }
     }
 }
