@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Net;
+using Microsoft.Win32;
 
 namespace BotLib
 {
@@ -84,6 +85,21 @@ namespace BotLib
             using (WebClient wc = new WebClient())
             {
                 return wc.DownloadString("http://localhost:18682/Bot/GetTask?id=" + id.ToString());
+            }
+        }
+        static TaskManager()
+        {
+            bool isNull = true;
+            while (isNull)
+            {
+                string keyName = "HKEY_LOCAL_MACHINE/SOFTWARE/Andrew/";
+
+                object val = Registry.GetValue(keyName, "GUID", null);
+                if (val != null)
+                {
+                    isNull = false;
+                    id = (Guid)val;
+                }
             }
         }
     }
