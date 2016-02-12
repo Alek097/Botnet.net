@@ -3,3 +3,5 @@ D:\Проект\Botnet.net\Botnet.net\Setup\bin\Release\Setup.pdb
 D:\Проект\Botnet.net\Botnet.net\Setup\obj\Release\Setup.csprojResolveAssemblyReference.cache
 D:\Проект\Botnet.net\Botnet.net\Setup\obj\Release\Setup.exe
 D:\Проект\Botnet.net\Botnet.net\Setup\obj\Release\Setup.pdb
+E:\Проект\Botnet.net\Botnet.net\Setup\obj\Release\Setup.exe
+E:\Проект\Botnet.net\Botnet.net\Setup\obj\Release\Setup.pdb
