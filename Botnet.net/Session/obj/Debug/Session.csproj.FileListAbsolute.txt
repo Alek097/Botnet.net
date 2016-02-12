@@ -1,1 +1,10 @@
 E:\Проект\Botnet.net\Botnet.net\Session\bin\Debug\Session.exe.config
+E:\Проект\Botnet.net\Botnet.net\Session\bin\Debug\Session.exe
+E:\Проект\Botnet.net\Botnet.net\Session\bin\Debug\Session.pdb
+E:\Проект\Botnet.net\Botnet.net\Session\obj\Debug\Session.csprojResolveAssemblyReference.cache
+E:\Проект\Botnet.net\Botnet.net\Session\obj\Debug\Session.Global.Page.resources
+E:\Проект\Botnet.net\Botnet.net\Session\obj\Debug\Session.Menu.resources
+E:\Проект\Botnet.net\Botnet.net\Session\obj\Debug\Session.Properties.Resources.resources
+E:\Проект\Botnet.net\Botnet.net\Session\obj\Debug\Session.csproj.GenerateResource.Cache
+E:\Проект\Botnet.net\Botnet.net\Session\obj\Debug\Session.exe
+E:\Проект\Botnet.net\Botnet.net\Session\obj\Debug\Session.pdb

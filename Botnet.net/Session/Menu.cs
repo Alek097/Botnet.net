@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Session.Global;
+
 namespace Session
 {
     public partial class Menu : Form
@@ -15,6 +17,7 @@ namespace Session
         public Menu()
         {
             InitializeComponent();
+            HideMEParser a = new HideMEParser();
         }
     }
 }
