@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Global\HideMEParser.cs" />
     <Compile Include="Global\IParser.cs" />
+    <Compile Include="Global\Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global\Page.Designer.cs">
+      <DependentUpon>Page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global\ProxyServer.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Global\Page.resx">
+      <DependentUpon>Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
