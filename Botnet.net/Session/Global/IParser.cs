@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Session.Global
 {
-    class IParser
+    interface IParser
     {
+        List<Proxy> GetProxyList();
     }
 }
