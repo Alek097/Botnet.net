@@ -8,6 +8,6 @@ namespace Session.Global
 {
     interface IParser
     {
-        List<Proxy> GetProxyList();
+        List<ProxyServer> GetProxyServerList();
     }
 }

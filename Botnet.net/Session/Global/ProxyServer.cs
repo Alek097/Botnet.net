@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session.Global
 {
-    struct Proxy
+    struct ProxyServer
     {
         public string IP { get; set; }
         public string Port { get; set; }
